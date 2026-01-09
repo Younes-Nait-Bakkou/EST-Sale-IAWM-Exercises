@@ -1,0 +1,18 @@
+{
+  "name": "tp-n1",
+  "version": "1.0.0",
+  "private": true,
+  "main": "app.cjs",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "nodemon app.cjs"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11",
+    "typescript": "^5.9.3"
+  }
+}

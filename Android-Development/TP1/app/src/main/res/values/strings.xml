@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TP1</string>
+    <string name="alert_button_text">Click me for alert!</string>
+</resources>
