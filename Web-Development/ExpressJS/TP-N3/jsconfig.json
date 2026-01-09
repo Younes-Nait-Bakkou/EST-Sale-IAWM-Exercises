@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleDetection": "legacy",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "checkJs": true,
+    "allowJs": true,
+
+    "verbatimModuleSyntax": false
+  },
+  "exclude": ["node_modules"]
+}
