@@ -4,7 +4,18 @@ const taskInput = document.getElementById("taskInput");
 const addTaskBtn = document.getElementById("addTaskBtn");
 const taskList = document.getElementById("taskList");
 
-const API_URL = "http://localhost:3000/tasks";
+const API_URL = "http://localhost:8000/tasks";
+
+fetch(API_URL)
+	.then((res) => res.json())
+	.then((tasks_obj) => {
+		tasks = tasks_obj;
+		renderTasks();
+	})
+	.catch((err) => {
+		alert("Error fetching tasks");
+		console.error(err);
+	});
 
 addTaskBtn.addEventListener("click", () => {
 	const title = taskInput.value.trim();
@@ -40,16 +51,16 @@ function renderTasks() {
 		checkbox.checked = task.completed;
 
 		checkbox.addEventListener("change", () => {
-			fetch(API_URL + "/" + index, {
+			fetch(API_URL + "/" + task._id, {
 				method: "PUT",
 				headers: {
 					"Content-Type": "application/json",
 				},
-				body: JSON.stringify({ completed: checkbox.checked }),
+				body: JSON.stringify({ ...task, completed: checkbox.checked }),
 			})
 				.then((res) => res.json())
 				.then((task) => {
-					tasks[index] = task;
+					tasks[index] = { ...task, completed: checkbox.checked };
 					renderTasks();
 				})
 				.catch((err) => {
