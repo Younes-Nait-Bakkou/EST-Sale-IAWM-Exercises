@@ -11,7 +11,7 @@ import com.est.sale.beans.Etudiant;
 
 public class EtudiantDAO {
 
-    private String url = "jbdc:mysql//localhost:3306/est_scolarite";
+    private String url = "jdbc:mysql://localhost:3306/est_scolarite";
     private String user = "younes";
     private String password = "123123zz";
 
@@ -19,7 +19,7 @@ public class EtudiantDAO {
         List<Etudiant> students = new ArrayList<Etudiant>();
 
         try {
-            Class.forName("com.mysql.cj.jbdc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (Exception e) {
             e.printStackTrace();
         }
