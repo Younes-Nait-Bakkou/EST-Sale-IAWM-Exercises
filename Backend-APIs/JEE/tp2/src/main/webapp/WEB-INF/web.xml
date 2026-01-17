@@ -5,6 +5,10 @@
     <servlet-name>EtudiantServlet</servlet-name>
     <servlet-class>com.est.sale.servlets.ControleurServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>ListEtudiantServlet</servlet-name>
+    <servlet-class>com.est.sale.servlets.ListControleurServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>EtudiantServlet</servlet-name>
     <url-pattern>/displayStudent</url-pattern>
@@ -12,5 +16,9 @@
   <servlet-mapping>
     <servlet-name>EtudiantServlet</servlet-name>
     <url-pattern>/saveStudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListEtudiantServlet</servlet-name>
+    <url-pattern>/students</url-pattern>
   </servlet-mapping>
 </web-app>
