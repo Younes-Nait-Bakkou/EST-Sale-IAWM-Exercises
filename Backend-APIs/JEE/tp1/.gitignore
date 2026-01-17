@@ -1,0 +1,24 @@
+# --- Maven (The Build) ---
+# Analogous to Python's __pycache__ or a virtualenv folder
+target/
+*.log
+
+# --- IntelliJ IDEA (The IDE) ---
+# User-specific settings that should NOT be shared
+.idea/
+*.iml
+*.iws
+
+# --- Eclipse (Teacher's IDE) ---
+# Just in case you accidentally open it in Eclipse later
+.classpath
+.project
+.settings/
+.metadata/
+
+# --- VS Code ---
+.vscode/
+
+# --- OS Junk ---
+.DS_Store
+Thumbs.db
