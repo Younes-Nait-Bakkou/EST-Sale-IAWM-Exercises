@@ -1,7 +1,6 @@
 package com.est.sale.servlets;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -10,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.est.sale.beans.Etudiant;
+import com.est.sale.dao.EtudiantDAO;
 
 public class ListControleurServlet extends HttpServlet {
 
@@ -17,23 +17,7 @@ public class ListControleurServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
-        List<Etudiant> promo = new ArrayList<Etudiant>();
-
-        Etudiant etu1 = new Etudiant();
-        etu1.setNom("Ahmed");
-        etu1.setNote(15.31);
-
-        Etudiant etu2 = new Etudiant();
-        etu2.setNom("Sofia");
-        etu2.setNote(10);
-
-        Etudiant etu3 = new Etudiant();
-        etu3.setNom("Karim");
-        etu3.setNote(9);
-
-        promo.add(etu1);
-        promo.add(etu2);
-        promo.add(etu3);
+        List<Etudiant> promo = new EtudiantDAO().getStudents();
 
         req.setAttribute("studentList", promo);
 
