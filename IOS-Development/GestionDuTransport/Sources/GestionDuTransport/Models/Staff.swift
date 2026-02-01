@@ -1,7 +1,7 @@
 class Staff: Person {
-    let staffNumber: String
-    let role: String
-    var assignedFlight: Flight?
+    private let staffNumber: String
+    private let role: String
+    private var assignedFlight: Flight?
 
     init(id: Int, firstName: String, lastName: String, staffNumber: String, role: String) {
         self.staffNumber = staffNumber

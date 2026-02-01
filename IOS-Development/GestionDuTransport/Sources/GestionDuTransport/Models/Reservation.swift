@@ -1,8 +1,8 @@
 class Reservation {
-    let number: String
-    let seat: String
-    let price: Double
-    let flight: Flight
+    private let number: String
+    private let seat: String
+    private let price: Double
+    private let flight: Flight
 
     init(number: String, seat: String, price: Double, flight: Flight) {
         self.number = number
