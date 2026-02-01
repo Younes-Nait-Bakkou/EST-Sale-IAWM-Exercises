@@ -3,18 +3,22 @@ class Staff: Person {
     private let role: String
     private var assignedFlight: Flight?
 
-    init(id: Int, firstName: String, lastName: String, staffNumber: String, role: String) {
-        self.staffNumber = staffNumber
+    init(firstName: String, lastName: String, role: String) {
+        self.staffNumber = Faker.generateEmployeeNumber()
         self.role = role
         self.assignedFlight = nil
-        super.init(id: id, firstName: firstName, lastName: lastName)
+
+        super.init(firstName: firstName, lastName: lastName)
     }
 
-    public func assignFlight(flight: Flight) {
-        guard let flight = assignedFlight else {
-            return
+    public func assignFlight(flight: Flight) throws {
+        guard assignedFlight == nil else {
+            throw FlightError.staffAlreadyAssigned
         }
+
         self.assignedFlight = flight
+
+        flight.addStaffMember(member: self)
     }
 
 }
