@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by XML-WS Runtime (https://github.com/eclipse-ee4j/metro-jax-ws). Runtime's version is Eclipse Metro/4.0.2 (RELEASE-4.0.2-ffda8c0; 2023-01-31T10:50:38+0000) XMLWS-Impl/4.0.1 XMLWS-API/4.0.0 XMLB-Impl/4.0.2 XMLB-API/4.0.0 git-revision#ffda8c0. --><xs:schema xmlns:tns="http://service/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://service/">
+
+<xs:element name="addNote" type="tns:addNote"/>
+
+<xs:element name="addNoteResponse" type="tns:addNoteResponse"/>
+
+<xs:element name="getNotes" type="tns:getNotes"/>
+
+<xs:element name="getNotesResponse" type="tns:getNotesResponse"/>
+
+<xs:element name="removeNote" type="tns:removeNote"/>
+
+<xs:element name="removeNoteResponse" type="tns:removeNoteResponse"/>
+
+<xs:complexType name="removeNote">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeNoteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNote">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="matiere" type="xs:string" minOccurs="0"/>
+<xs:element name="note" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNoteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNotes">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getNotesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
