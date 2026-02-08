@@ -9,7 +9,7 @@ import jakarta.jws.WebParam;
 import jakarta.jws.WebService;
 
 /**
- * @author flamer
+ * @author Younes-Nait-Bakkou
  */
 @WebService(serviceName = "CalculatorWS")
 public class CalculatorWS {
