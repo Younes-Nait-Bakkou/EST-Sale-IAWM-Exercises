@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo" version="1.3">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"></Property>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"></SyntheticProperty>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"></SyntheticProperty>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"></AuxValue>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"></AuxValue>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"></AuxValue>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"></AuxValue>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"></AuxValue>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"></AuxValue>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"></AuxValue>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"></AuxValue>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"></AuxValue>
+  </AuxValues>
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group attributes="0" groupAlignment="0" type="103">
+        <Group attributes="0" type="102">
+          <EmptySpace attributes="0" max="-2"></EmptySpace>
+          <Group attributes="0" groupAlignment="0" type="103">
+            <Component attributes="0" id="jScrollPane1" max="32767" pref="940"></Component>
+            <Group alignment="1" attributes="0" type="102">
+              <EmptySpace attributes="0" max="32767" min="0" pref="0"></EmptySpace>
+              <Component attributes="0" id="btnLoad" max="-2" min="-2"></Component>
+            </Group>
+            <Group alignment="1" attributes="0" type="102">
+              <Component attributes="0" id="txtTrainId" max="-2" min="-2" pref="167"></Component>
+              <EmptySpace attributes="0" max="32767"></EmptySpace>
+              <Component attributes="0" id="btnBook" max="-2" min="-2"></Component>
+            </Group>
+          </Group>
+          <EmptySpace attributes="0" max="-2"></EmptySpace>
+        </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group attributes="0" groupAlignment="0" type="103">
+        <Group alignment="0" attributes="0" type="102">
+          <EmptySpace attributes="0" max="-2"></EmptySpace>
+          <Component attributes="0" id="btnLoad" max="-2" min="-2"></Component>
+          <EmptySpace attributes="0" max="-2" type="separate"></EmptySpace>
+          <Component attributes="0" id="jScrollPane1" max="-2" min="-2" pref="275"></Component>
+          <EmptySpace attributes="0" max="-2" type="separate"></EmptySpace>
+          <Group attributes="0" groupAlignment="3" type="103">
+            <Component alignment="3" attributes="0" id="btnBook" max="-2" min="-2"></Component>
+            <Component alignment="3" attributes="0" id="txtTrainId" max="-2" min="-2"></Component>
+          </Group>
+          <EmptySpace attributes="0" max="32767" pref="34"></EmptySpace>
+        </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="btnLoad">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Load Trains"></Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" handler="btnLoadActionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent"></EventHandler>
+      </Events>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"></AuxValue>
+      </AuxValues>
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"></Layout>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="tblTrains">
+          <Properties>
+            <Property editor="org.netbeans.modules.form.editors2.TableModelEditor" name="model" type="javax.swing.table.TableModel">
+              <Table columnCount="4" rowCount="4">
+                <Column editable="true" title="Title 1" type="java.lang.Object"></Column>
+                <Column editable="true" title="Title 2" type="java.lang.Object"></Column>
+                <Column editable="true" title="Title 3" type="java.lang.Object"></Column>
+                <Column editable="true" title="Title 4" type="java.lang.Object"></Column>
+              </Table>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="btnBook">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Book"></Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" handler="btnBookActionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent"></EventHandler>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtTrainId">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="TR100"></Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" handler="txtTrainIdActionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent"></EventHandler>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
