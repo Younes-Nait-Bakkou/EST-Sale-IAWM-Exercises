@@ -1,122 +1,185 @@
 import 'package:flutter/material.dart';
+import 'models/contact.dart';
+
+// The TP asks for a specific hex color.
+// In Flutter, we replace the '#' in a hex code with '0xFF' (the FF means 100% opacity).
+const darkBlueColor = Color(0xFF486579);
 
 void main() {
   runApp(const MyApp());
 }
 
+// MyApp is a StatelessWidget because its core configuration doesn't change over time.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      title: 'Contact App',
+      theme: ThemeData(primaryColor: darkBlueColor),
+      home: const MyHomePage(title: 'Contact List'),
     );
   }
 }
 
+// 1. The StatefulWidget itself. It accepts a title from MyApp.
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
   final String title;
 
+  const MyHomePage({super.key, required this.title});
+
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomePage> createState() => MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+// 2. The State class. This is where the actual data and UI live.
+class MyHomePageState extends State<MyHomePage> {
+  // --- STATE VARIABLES ---
+  // _contact will temporarily hold the data while the user types it in the form.
+  Contact _contact = Contact();
 
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
+  // _contacts is the master list that will store all the saved contacts.
+  List<Contact> _contacts = [];
 
+  final _formKey = GlobalKey<FormState>();
+
+  // --- UI BUILDER ---
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+    // Scaffold provides the standard layout structure (AppBar, Body, etc.)
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        backgroundColor: Colors.white,
+        title: Center(
+          child: Text(
+            widget
+                .title, // This grabs the title "Contact List" from the widget above
+            style: const TextStyle(color: darkBlueColor),
+          ),
+        ),
       ),
       body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
         child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: .center,
-          children: [
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            _form(), // Calling the form placeholder
+            _list(), // Calling the list placeholder
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
     );
   }
+
+  // --- PLACEHOLDER WIDGETS ---
+  // We will build these out in the next steps!
+  Widget _form() => Container(
+    color: Colors.white,
+    padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+    child: Form(
+      key: _formKey, // We link the key here
+      child: Column(
+        children: <Widget>[
+          // --- FULL NAME INPUT ---
+          TextFormField(
+            decoration: const InputDecoration(labelText: 'Full Name'),
+            // Validation: Checks if the input is null or empty
+            validator: (val) =>
+                (val == null || val.isEmpty) ? 'This field is mandatory' : null,
+            // OnSaved: Triggers when we call form.save() later
+            onSaved: (val) => setState(() => _contact.name = val),
+          ),
+
+          // --- MOBILE INPUT ---
+          TextFormField(
+            decoration: const InputDecoration(labelText: 'Mobile'),
+            keyboardType: TextInputType.phone, // Pops up a number keyboard!
+            // Validation: Checks if the number is at least 10 characters
+            validator: (val) => (val == null || val.length < 10)
+                ? '10 characters required'
+                : null,
+            onSaved: (val) => setState(() => _contact.mobile = val),
+          ),
+          // --- SUBMIT BUTTON ---
+          Container(
+            margin: const EdgeInsets.all(10.0),
+            child: ElevatedButton(
+              // Modern replacement for RaisedButton
+              style: ElevatedButton.styleFrom(
+                backgroundColor: darkBlueColor,
+                foregroundColor: Colors.white,
+              ),
+              onPressed: () => _onSubmit(),
+              child: const Text('Submit'),
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+
+  void _onSubmit() {
+    var form = _formKey.currentState;
+
+    // 1. Check if the form passes our validation rules
+    if (form != null && form.validate()) {
+      // 2. Trigger the 'onSaved' functions in our TextFormFields
+      form.save();
+
+      // 3. Print to the debug console (just like the TP asks)
+      print('''
+      Full Name: ${_contact.name}
+      Mobile: ${_contact.mobile}
+      ''');
+
+      // 4. Add a NEW instance of Contact to our list and update the UI
+      setState(() {
+        _contacts.add(
+          Contact(id: null, name: _contact.name, mobile: _contact.mobile),
+        );
+      });
+
+      // 5. Clear the text fields for the next entry
+      form.reset();
+    }
+  }
+
+  Widget _list() => Expanded(
+    child: Card(
+      margin: const EdgeInsets.fromLTRB(20, 30, 20, 0),
+      child: Scrollbar(
+        child: ListView.builder(
+          padding: const EdgeInsets.all(8),
+          // itemCount tells Flutter exactly how many rows to draw
+          itemCount: _contacts.length,
+          // itemBuilder draws the UI for each individual row
+          itemBuilder: (context, index) {
+            return Column(
+              children: <Widget>[
+                ListTile(
+                  leading: const Icon(
+                    Icons.account_circle,
+                    color: darkBlueColor,
+                    size: 40.0,
+                  ),
+                  title: Text(
+                    // We use ? and ?? to safely handle potential null values
+                    _contacts[index].name?.toUpperCase() ?? 'UNKNOWN',
+                    style: const TextStyle(
+                      color: darkBlueColor,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  subtitle: Text(_contacts[index].mobile ?? 'No mobile'),
+                  onTap: () {}, // We will use this in the future for editing!
+                ),
+                const Divider(height: 5.0),
+              ],
+            );
+          },
+        ),
+      ),
+    ),
+  );
 }
