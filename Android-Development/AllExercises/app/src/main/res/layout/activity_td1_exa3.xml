@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Élection des Délégués"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Veuillez choisir votre candidat :"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgCandidates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="#EEEEEE"
+        android:padding="16dp">
+
+        <RadioButton
+            android:id="@+id/rbCandidateA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Candidat A (Alice)"
+            android:textSize="18sp"/>
+
+        <RadioButton
+            android:id="@+id/rbCandidateB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Candidat B (Bob)"
+            android:textSize="18sp"/>
+
+        <RadioButton
+            android:id="@+id/rbCandidateC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Candidat C (Charlie)"
+            android:textSize="18sp"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnVote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VOTER"
+        android:textSize="20sp"
+        android:layout_marginBottom="32dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Résultats en direct :"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tvResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alice : 0 vote(s)\nBob : 0 vote(s)\nCharlie : 0 vote(s)"
+        android:textSize="16sp"
+        android:lineSpacingExtra="8dp"
+        android:gravity="center"/>
+
+</LinearLayout>

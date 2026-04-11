@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saisie de texte"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/etInputData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tapez quelque chose ici..."
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnCopyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Copier (Action Manuelle)"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvResultButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Résultat du Bouton : "
+        android:textSize="16sp"
+        android:textColor="#2196F3"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvResultWatcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Résultat du TextWatcher : "
+        android:textSize="16sp"
+        android:textColor="#4CAF50"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"/>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#CCC" android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Autres Contrôles"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/cbExample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ceci est une case à cocher" />
+
+    <RadioGroup
+        android:id="@+id/rgOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbOpt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 1" />
+
+        <RadioButton
+            android:id="@+id/rbOpt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 2" />
+    </RadioGroup>
+
+</LinearLayout>

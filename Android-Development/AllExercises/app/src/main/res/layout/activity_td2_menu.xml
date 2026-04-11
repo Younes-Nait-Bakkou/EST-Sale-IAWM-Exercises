@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TD 2 : Événements et Composants"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <Button android:id="@+id/btnTD2Ex1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ex 1 : Structure de vues" android:layout_marginTop="4dp"/>
+        <Button android:id="@+id/btnTD2Ex2" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ex 2 : Cycle de vie" android:layout_marginTop="4dp"/>
+        <Button android:id="@+id/btnTD2Ex3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ex 3 : EditText &amp; Watcher" android:layout_marginTop="4dp"/>
+        <Button android:id="@+id/btnTD2Ex4" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ex 4 : FrameLayout &amp; OnTouch" android:layout_marginTop="4dp"/>
+        <Button android:id="@+id/btnTD2Ex5" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ex 5 : Compteur de clics" android:layout_marginTop="4dp"/>
+        <Button android:id="@+id/btnTD2Ex6" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ex 6 : Image Drag (Follow finger)" android:layout_marginTop="4dp"/>
+        <Button android:id="@+id/btnTD2Ex7" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ex 7 : Calcul d'âge (DatePicker)" android:layout_marginTop="4dp"/>
+        <Button android:id="@+id/btnTD2Ex8" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ex 8 : Convertisseur Monétaire" android:layout_marginTop="4dp"/>
+        <Button android:id="@+id/btnTD2Ex9" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ex 9 : Radio Buttons &amp; Images" android:layout_marginTop="4dp"/>
+        <Button android:id="@+id/btnTD2Ex10" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ex 10 : Spinner Jours Semaine" android:layout_marginTop="4dp"/>
+        <Button android:id="@+id/btnTD2Ex11" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ex 11 : Authentification &amp; Result" android:layout_marginTop="4dp"/>
+        <Button android:id="@+id/btnTD2Ex12" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ex 12 : Broadcast (Boot)" android:layout_marginTop="4dp"/>
+        <Button android:id="@+id/btnTD2Ex13" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ex 13 : Liste de Repas" android:layout_marginTop="4dp"/>
+        <Button android:id="@+id/btnTD2Ex14" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ex 14 : SMS &amp; Appel" android:layout_marginTop="4dp"/>
+        <Button android:id="@+id/btnTD2Ex15" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ex 15 : Position Parent/Enfant" android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+</ScrollView>

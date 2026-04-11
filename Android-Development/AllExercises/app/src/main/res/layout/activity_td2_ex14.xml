@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- SMS Part -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interception de SMS"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvSmsContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="En attente de SMS..."
+        android:padding="10dp"
+        android:background="#EEEEEE"
+        android:minHeight="100dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#999999"
+        android:layout_marginVertical="20dp" />
+
+    <!-- Phone Call Part -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appel Téléphonique"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Entrez un numéro"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/btnMakeCall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lancer l'appel"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android Learning Hub"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnOpenBasicViews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Basic Views &amp; Clicks" />
+
+        <Button
+            android:id="@+id/btnOpenAlerts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="2. Alerts and Snackbars" />
+
+
+        <Button
+            android:id="@+id/btnOpenCalendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="3. Date Picker" />
+
+        <Button
+            android:id="@+id/btnOpenAdapter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="4. Lists and Adapters" />
+
+        <Button
+            android:id="@+id/btnOpenIntents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="5. Intents &amp; Data" />
+
+        <Button
+            android:id="@+id/btnOpenDatabase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="6. SQLite Database" />
+
+        <Button
+            android:id="@+id/btnOpenThreads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="7. Background Threads" />
+
+        <Button
+            android:id="@+id/btnOpenServices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="8. Background Services" />
+
+        <Button
+            android:id="@+id/btnOpenFragments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="9. Fragments &amp; Transactions" />
+
+        <Button
+            android:id="@+id/btnOpenAlarms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="10. Alarm Manager" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnOpenTD1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TD 1 : Interfaces Graphiques"
+            android:backgroundTint="#FF9800" />
+
+        <Button
+            android:id="@+id/btnOpenTD2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TD 2 : Événements et Composants"
+            android:backgroundTint="#4CAF50" />
+    </LinearLayout>
+</ScrollView>
