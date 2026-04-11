@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test du Cycle de Vie"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. Regardez les Toasts apparaître.\n2. Ouvrez l'onglet 'Logcat' dans Android Studio.\n3. Appuyez sur le bouton 'Home' de votre téléphone, puis revenez sur l'application pour voir les changements d'état !"
+        android:textSize="16sp"
+        android:gravity="center"/>
+
+</LinearLayout>

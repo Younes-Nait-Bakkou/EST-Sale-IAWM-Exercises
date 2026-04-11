@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="20dp"
+    android:gravity="center_vertical">
+
+    <RadioGroup
+        android:id="@+id/rgAnimals"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <RadioButton
+            android:id="@+id/rbBird"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bird" />
+
+        <RadioButton
+            android:id="@+id/rbCat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cat" />
+
+        <RadioButton
+            android:id="@+id/rbDog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dog" />
+
+        <RadioButton
+            android:id="@+id/rbRabbit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rabbit" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/ivAnimal"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_weight="1"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:contentDescription="Animal Image"
+        android:scaleType="centerInside" />
+
+</LinearLayout>

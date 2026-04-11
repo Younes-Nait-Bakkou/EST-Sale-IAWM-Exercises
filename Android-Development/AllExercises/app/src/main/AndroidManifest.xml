@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AllExercises">
+        <activity android:name=".BasicViewsActivity"/>
+        <activity android:name=".AlertActivity"/>
+        <activity android:name=".CalenderActivity"/>
+        <activity android:name=".ListActivity"/>
+        <activity android:name=".IntentActivity"/>
+        <activity android:name=".IntentDestinationActivity"/>
+        <activity android:name=".DatabaseActivity"/>
+        <activity android:name=".ThreadActivity"/>
+        <activity android:name=".ServiceActivity"/>
+        <service android:name=".MyMusicService"/>
+        <activity android:name=".FragmentActivity"/>
+        <activity android:name=".AlarmActivity"/>
+        <receiver android:name=".MyAlarmReceiver" />
+
+        <activity android:name=".TD1MenuActivity"/>
+        <activity android:name=".TD1Ex1Activity"/>
+        <activity android:name=".TD1Ex2Activity"/>
+        <activity android:name=".TD1Ex3Activity"/>
+        <activity android:name=".TD1Ex4Activity"/>
+        <activity android:name=".TD1Ex5Activity"/>
+        <activity android:name=".TD1Ex6Activity"/>
+        <activity android:name=".TD1ExA1Activity"/>
+        <activity android:name=".TD1ExA2Activity"/>
+        <activity android:name=".TD1ExA3Activity"/>
+        <activity android:name=".TD1ExA4Activity"/>
+
+        <activity android:name=".TD2MenuActivity"/>
+        <activity android:name=".TD2Ex1Activity"/>
+        <activity android:name=".TD2Ex2Activity"/>
+        <activity android:name=".TD2Ex3Activity"/>
+        <activity android:name=".TD2Ex4Activity"/>
+        <activity android:name=".TD2Ex5Activity"/>
+        <activity android:name=".TD2Ex6Activity"/>
+        <activity android:name=".TD2Ex7Activity"/>
+        <activity android:name=".TD2Ex8Activity"/>
+        <activity android:name=".TD2Ex9Activity"/>
+        <activity android:name=".TD2Ex10Activity"/>
+        <activity android:name=".TD2Ex11Activity"/>
+        <activity android:name=".TD2Ex11ErrorActivity"/>
+        <activity android:name=".TD2Ex11HomeActivity"/>
+        <activity android:name=".TD2Ex11CalcActivity"/>
+        <activity android:name=".TD2Ex12Activity"/>
+        <activity android:name=".TD2Ex13Activity"/>
+        <activity android:name=".TD2Ex14Activity"/>
+        <activity android:name=".TD2Ex15Activity"/>
+
+        <receiver android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+
+</manifest>

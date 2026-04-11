@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TD 1: Exercices"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnTD1Ex1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exercice 1 : Structure de vues" />
+
+    <Button
+        android:id="@+id/btnTD1Ex2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Exercice 2 : Cycle de vie (Lifecycle)" />
+
+    <Button
+        android:id="@+id/btnTD1Ex3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Exercice 3 : EditText &amp; TextWatcher" />
+
+    <Button
+        android:id="@+id/btnTD1Ex4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Exercice 4 : Événement OnTouch (Swipe)" />
+
+    <Button
+        android:id="@+id/btnTD1Ex5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Exercice 5 : Switch et SeekBar (Lampe)" />
+
+    <Button
+        android:id="@+id/btnTD1Ex6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Exercice 6 : Onglets (Tabs &amp; ViewPager)" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Partie 2 : Applications"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnTD1ExA1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exercice A1 : Convertisseur de devise"
+        android:backgroundTint="#4CAF50"/>
+
+    <Button
+        android:id="@+id/btnTD1ExA2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Exercice A2 : Éditeur de texte"
+        android:backgroundTint="#4CAF50"/>
+
+    <Button
+        android:id="@+id/btnTD1ExA3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Exercice A3 : Application de Vote"
+        android:backgroundTint="#4CAF50"/>
+
+    <Button
+        android:id="@+id/btnTD1ExA4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Exercice A4 : Listes et Base de Données"
+        android:backgroundTint="#4CAF50"
+        android:layout_marginBottom="32dp"/>
+</LinearLayout>

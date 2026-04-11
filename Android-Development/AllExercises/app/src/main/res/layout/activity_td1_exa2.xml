@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Éditeur de Texte"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/etEditorInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tapez votre texte ici..."
+            android:layout_marginBottom="16dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Style :" android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <CheckBox android:id="@+id/cbBold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gras" />
+            <CheckBox android:id="@+id/cbItalic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Italique" />
+            <CheckBox android:id="@+id/cbUnderline" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Souligné" />
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Taille :" android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/spinnerSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Casse :" android:textStyle="bold"/>
+        <RadioGroup android:id="@+id/rgCase" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+            <RadioButton android:id="@+id/rbNormal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Normal" android:checked="true"/>
+            <RadioButton android:id="@+id/rbMajuscule" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MAJ" />
+            <RadioButton android:id="@+id/rbMinuscule" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="min" />
+        </RadioGroup>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Couleur du texte :" android:textStyle="bold"/>
+        <RadioGroup android:id="@+id/rgTextColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+            <RadioButton android:id="@+id/rbTextBlack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Noir" android:checked="true"/>
+            <RadioButton android:id="@+id/rbTextRed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rouge" />
+            <RadioButton android:id="@+id/rbTextBlue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bleu" />
+        </RadioGroup>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Couleur de fond :" android:textStyle="bold"/>
+        <RadioGroup android:id="@+id/rgBgColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="24dp">
+            <RadioButton android:id="@+id/rbBgWhite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Blanc" android:checked="true"/>
+            <RadioButton android:id="@+id/rbBgYellow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Jaune" />
+            <RadioButton android:id="@+id/rbBgGray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gris" />
+        </RadioGroup>
+
+        <View android:layout_width="match_parent" android:layout_height="2dp" android:background="#CCC" android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aperçu du résultat :"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvPreview"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Votre texte formatté apparaîtra ici."
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="#FFFFFF"
+            android:textColor="#000000"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+</ScrollView>
