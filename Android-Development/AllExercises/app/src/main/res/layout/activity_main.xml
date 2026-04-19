@@ -109,5 +109,13 @@
             android:layout_marginTop="8dp"
             android:text="TD 2 : Événements et Composants"
             android:backgroundTint="#4CAF50" />
+
+        <Button
+            android:id="@+id/btnOpenEx1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Ex1"
+            android:backgroundTint="#4CAF50" />
     </LinearLayout>
 </ScrollView>

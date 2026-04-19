@@ -84,6 +84,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".Exam1"/>
+        <activity android:name=".Exam1Activity1"/>
+        <activity android:name=".Exam1AuthErrorActivity"/>
+
     </application>
 
 
