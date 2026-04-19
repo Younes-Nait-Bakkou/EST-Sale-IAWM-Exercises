@@ -29,8 +29,9 @@ public class MainActivity extends AppCompatActivity {
         // --------- Travaux pratiques -------------
         setupButton(R.id.btnOpenTD1, TD1MenuActivity.class);
         setupButton(R.id.btnOpenTD2, TD2MenuActivity.class);
-    }
+        setupButton(R.id.btnOpenEx1, Exam1.class);
 
+    }
     private void setupButton(int id, Class<?> activityClass) {
         Button button = findViewById(id);
         if (button != null) {
